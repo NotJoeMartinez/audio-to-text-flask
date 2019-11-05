@@ -23,7 +23,7 @@ def sample_long_running_recognize(storage_uri):
 
     # Encoding of audio data sent. This sample sets this explicitly.
     # This field is optional for FLAC and WAV audio formats.
-    encoding = enums.RecognitionConfig.AudioEncoding.LINEAR16
+    encoding = enums.RecognitionConfig.AudioEncoding.ENCODING_UNSPECIFIED
     config = {
         "sample_rate_hertz": sample_rate_hertz,
         "language_code": language_code,

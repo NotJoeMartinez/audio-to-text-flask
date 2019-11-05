@@ -1,5 +1,5 @@
 from flask import *  
-from transcribe import scrib 
+# from transcribe import scrib 
 app = Flask(__name__)  
  
 @app.route('/')  
