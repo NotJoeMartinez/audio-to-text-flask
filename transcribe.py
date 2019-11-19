@@ -1,6 +1,9 @@
 from google.cloud import speech_v1
 from google.cloud.speech_v1 import enums
+import time
+import os
 
+moment=time.strftime("%Y-%b-%d__%H_%M_%S",time.localtime())
 
 def sample_long_running_recognize(storage_uri):
     """
@@ -35,10 +38,19 @@ def sample_long_running_recognize(storage_uri):
 
     print(u"Waiting for operation to complete...")
     response = operation.result()
-
+    full_transcript = []
     for result in response.results:
         # First alternative is the most probable result
         alternative = result.alternatives[0]
-        print(u"Transcript: {}".format(alternative.transcript))
-        
-sample_long_running_recognize('gs://cypress-blowpipe-mycolog/audio/Family.mp3')
+        full_transcript.append(alternative.transcript)
+        # print(u"Transcript: {}".format(alternative.transcript))
+        print(alternative.transcript)
+        print(type(alternative.transcript))
+
+    with open (f'transcripts/{moment}', 'w') as f:
+      for x in full_transcript:
+        f.write(x+'\n')
+
+
+
+sample_long_running_recognize('gs://cypress-blowpipe-mycolog/audio/no_way_ican_transcribe_01.mp3')
