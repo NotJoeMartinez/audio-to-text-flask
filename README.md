@@ -1,6 +1,6 @@
 # audio-to-text-flask
 
-My professor uploads his lectures to a website where I can download them as a raw mp3 file. Listening to him talk is great but I find when attend class and take notes I often miss important moments that end up on the test review. Because the recordings are just mp3 files, I find myself spending a lot of time scrubbing through the recorded lecture looking for the definitions of key terms. This web app will be able to transcribe hour long lectures so I can have the power of regular expressions (Control/Command + F) to help me with the process.  
+My professor uploads his lectures to a website where I can download them as a raw mp3 file. Listening to him talk is great but when I take notes I'll often miss important moments that end up on the test review. Because the recordings are just mp3 files, I find myself spending a lot of time scrubbing through the recorded lecture looking for the definitions of key terms. This web app will be able to transcribe hour long lectures so I can have the power of regular expressions (Control/Command + F) to help me with the process.  
 
 ## Tools 
 
