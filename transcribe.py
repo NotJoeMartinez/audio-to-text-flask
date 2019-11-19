@@ -52,5 +52,3 @@ def sample_long_running_recognize(storage_uri):
         f.write(x+'\n')
 
 
-
-sample_long_running_recognize('gs://cypress-blowpipe-mycolog/audio/no_way_ican_transcribe_01.mp3')

@@ -4,3 +4,4 @@ audio/
 credpath.sh
 auth/
 env/
+config.py
