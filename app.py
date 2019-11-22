@@ -26,7 +26,7 @@ def success():
         gcs_uri = 'gs://' + cf.bucketname + '/' + f.filename
 
         # execute transcribe function on the gcs_uri
-        sample_long_running_recognize(gcs_uri)
+        sample_long_running_recognize(gcs_uri, f.filename)
         
         return render_template("success.html", name = f.filename)  
   

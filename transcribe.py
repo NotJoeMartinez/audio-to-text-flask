@@ -5,7 +5,7 @@ import os
 
 moment=time.strftime("%Y-%b-%d__%H_%M_%S",time.localtime())
 
-def sample_long_running_recognize(storage_uri):
+def sample_long_running_recognize(storage_uri, filename):
     """
     Transcribe long audio file from Cloud Storage using asynchronous speech
     recognition
@@ -47,7 +47,7 @@ def sample_long_running_recognize(storage_uri):
         print(alternative.transcript)
         print(type(alternative.transcript))
 
-    with open (f'transcripts/{moment}', 'w') as f:
+    with open (f'transcripts/{filename}'+'.txt', 'w') as f:
       for x in full_transcript:
         f.write(x+'\n')
 
