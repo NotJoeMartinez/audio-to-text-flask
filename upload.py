@@ -6,9 +6,9 @@ from transcribe import *
 import config as cf 
 
 bucketname = cf.bucketname
-audio_file_name = 'audio/bled.mp3'
+# audio_file_name = 'audio/bled.mp3'
 
-upload_blob( bucketname, audio_file_name , 'bled.mp3')
+upload_blob( bucketname, audio_file_name , destination_blob_name)
 
 gcs_uri = 'gs://' + bucketname + '/' + 'bled.mp3'
 
