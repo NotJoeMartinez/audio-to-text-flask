@@ -42,8 +42,8 @@ def sample_long_running_recognize(storage_uri):
         print(u"Transcript: {}".format(alternative.transcript))
 
     # remove the everythign before the last forward slash. This is for file nameing 
-    file_name = url_list[0].rsplit('/', 1)[-1]
-    
+    file_name = storage_uri.rsplit('/', 1)[-1]
+    print(file_name)
     # Save the array of full transcrip to a text file 
     with open (f'transcripts/{file_name}'+'.txt', 'w') as f:
       for x in full_transcript:
@@ -71,9 +71,8 @@ for x in blob_list:
     gcs_uri = 'gs://' + cf.bucketname + '/' + x
     url_list.append(gcs_uri)
 
-
-
-sample_long_running_recognize(url_list[0])
+for url in url_list:
+    sample_long_running_recognize(url)
 
 # print(cf.bucketname)
 # list_blobs(cf.bucketname)
