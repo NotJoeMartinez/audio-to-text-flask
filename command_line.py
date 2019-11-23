@@ -45,7 +45,7 @@ def sample_long_running_recognize(storage_uri):
     file_name = storage_uri.rsplit('/', 1)[-1]
     print(file_name)
     # Save the array of full transcrip to a text file 
-    with open (f'transcripts/{file_name}'+'.txt', 'w') as f:
+    with open (f'transcript'/{file_name}'+'.txt', 'w') as f:
       for x in full_transcript:
         f.write(x+'\n')
 
