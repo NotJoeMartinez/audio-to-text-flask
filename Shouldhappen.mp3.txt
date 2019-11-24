@@ -1,3 +1,0 @@
-so what does should do is allow user to upload an MP3 file
- to the upload study HTML and send it to
- a function that uploads it to my Google Cloud Storage bucket and then it filled CU URI and then it sends that URI to another function that calls the already uploaded file as an argument and then transcribe that using the API it's going to return success in the name of the file on the back

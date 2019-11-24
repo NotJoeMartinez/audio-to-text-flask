@@ -50,5 +50,7 @@ def sample_long_running_recognize(storage_uri, filename):
     with open (f'transcripts/{filename}'+'.txt', 'w') as f:
       for x in full_transcript:
         f.write(x+'\n')
+    # return the array of full transcript        
+    return full_transcript
 
 

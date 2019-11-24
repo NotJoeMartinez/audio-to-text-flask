@@ -5,5 +5,9 @@
 <body>  
 <p>File uploaded successfully</p>  
 <p>File Name: {{name}}</p>  
+<!-- loop through the full_transcript array -->
+{% for line in text %}
+    <p>{{ line }}</p>
+{% endfor %}
 </body>  
 </html>  
