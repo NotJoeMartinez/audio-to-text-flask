@@ -33,6 +33,6 @@ def success():
     
     # Return template success.html save the name & contents of file to vars 
     return render_template("success.html", name = f.filename, text = full_transcript)  
-  
-if __name__ == '__main__':  
-    app.run(debug = True)  
+    
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")
